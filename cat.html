@@ -21,7 +21,6 @@
   </head>
 
   <body class="cat-page">
-    <a class="skip-link" href="#cats">Skip to the cats</a>
     <div class="grain" aria-hidden="true"></div>
 
     <header class="cat-top">
@@ -86,19 +85,5 @@
         Back to links
       </a>
     </footer>
-    <script>
-      (() => {
-        const skip = document.querySelector(".skip-link");
-        const target = document.querySelector("#cats");
-
-        if (!skip || !target) return;
-
-        skip.addEventListener("click", () => {
-          window.requestAnimationFrame(() => {
-            target.focus({ preventScroll: true });
-          });
-        });
-      })();
-    </script>
   </body>
 </html>

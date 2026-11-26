@@ -6,6 +6,21 @@
 
   /* ------------------------------ Toast + copy --------------------------- */
 
+  // Skip links should hand focus to the target so the pill cannot float over
+  // the page after the jump, especially while scrolling on mobile.
+  document.querySelectorAll(".skip-link").forEach((skip) => {
+    skip.addEventListener("click", () => {
+      const targetId = skip.getAttribute("href");
+      if (!targetId || targetId.charAt(0) !== "#") return;
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      window.requestAnimationFrame(() => {
+        target.focus({ preventScroll: true });
+      });
+    });
+  });
+
   const toastNode = document.querySelector("[data-toast]");
   const toastText = document.querySelector("[data-toast-text]");
   let toastTimer = 0;

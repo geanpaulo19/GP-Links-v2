@@ -1,0 +1,294 @@
+/* ------------------------------------------------------------------
+   The Cats / an easter egg page in the Night Screening system.
+   Reuses tokens, fonts and global utilities from styles.css.
+------------------------------------------------------------------- */
+
+.cat-page {
+  min-height: 100dvh;
+}
+
+.cat-top {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px var(--gutter) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cat-top-meta {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cat-main {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vh, 72px) var(--gutter) 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-main:focus {
+  outline: none;
+}
+
+.cat-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.cat-paw {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  color: var(--accent);
+}
+
+.cat-title {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--white);
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6.5vw, 3.5rem);
+  font-weight: 800;
+  font-stretch: 112%;
+  font-variation-settings: "wght" 800, "wdth" 112;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.cat-intro {
+  max-width: 32ch;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.cat-card {
+  width: 100%;
+  max-width: 440px;
+  margin-top: 34px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.cat-media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--field);
+}
+
+.cat-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.cat-body {
+  padding: 22px 24px 2px;
+  text-align: center;
+}
+
+.cat-name {
+  margin: 0 0 6px;
+  color: var(--foreground);
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-stretch: 105%;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.cat-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.cat-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 24px 24px;
+}
+
+.cat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 9999px;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 200ms var(--ease-ui),
+    border-color 200ms var(--ease-ui),
+    color 200ms var(--ease-ui),
+    transform 180ms var(--ease-ui);
+}
+
+.cat-btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: currentColor;
+}
+
+.cat-btn--primary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.cat-btn--outline {
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.cat-btn:active {
+  transform: scale(0.99);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cat-btn--primary:hover {
+    background: var(--white);
+  }
+
+  .cat-btn--outline:hover {
+    border-color: var(--border-strong);
+    background: var(--field);
+  }
+}
+
+.cat-foot {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px var(--gutter) 26px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cat-foot p {
+  margin: 0;
+}
+
+.cat-foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.cat-foot a:hover {
+  color: var(--foreground);
+}
+
+.cat-foot svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cat-label {
+    animation: fade-rise 600ms var(--ease-out) 40ms both;
+  }
+
+  .cat-title {
+    animation: fade-rise 700ms var(--ease-out) 100ms both;
+  }
+
+  .cat-intro {
+    animation: fade-rise 700ms var(--ease-out) 160ms both;
+  }
+
+  .cat-card {
+    animation: fade-rise 800ms var(--ease-out) 220ms both;
+  }
+}
+
+@media (max-width: 640px) {
+  .cat-top {
+    padding-top: 18px;
+  }
+
+  .cat-main {
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+
+  .cat-title {
+    font-size: clamp(2.25rem, 10vw, 2.75rem);
+  }
+
+  .cat-card {
+    margin-top: 30px;
+  }
+
+  .cat-body {
+    padding: 20px 20px 0;
+  }
+
+  .cat-actions {
+    padding: 18px 20px 20px;
+  }
+
+  .cat-foot {
+    padding-bottom: 22px;
+  }
+}

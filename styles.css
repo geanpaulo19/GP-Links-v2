@@ -497,7 +497,7 @@ body {
   }
 }
 
-/* -------------------------------- Links --------------------------------- *//* -------------------------------- Links --------------------------------- */
+/* -------------------------------- Links --------------------------------- */
 
 .links {
   min-width: 0;
@@ -552,7 +552,7 @@ body {
 .feature-tag {
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 9.5px;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.18em;
@@ -807,7 +807,7 @@ body {
   grid-column: 4;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 9.5px;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.04em;
